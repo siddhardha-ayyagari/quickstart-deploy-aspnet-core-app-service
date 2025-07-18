@@ -23,3 +23,10 @@ steps:
     appName: 'azuredevops'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'SIDPOC(b39446a1-bcbd-4ea9-aad2-13007cb57bc1)'
+    appType: 'webApp'
+    appName: 'azuredevops'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
